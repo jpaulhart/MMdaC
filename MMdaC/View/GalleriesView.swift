@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct GalleriesView: View {
+    @State private var searchText = ""
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -15,6 +17,7 @@ struct GalleriesView: View {
                 Spacer()
             }
             .navigationTitle("Caravaggio Galleries")
+            .searchable(text: $searchText)
         }
     }
 }
